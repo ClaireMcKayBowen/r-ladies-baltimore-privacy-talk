@@ -25,8 +25,7 @@ dat <- starwars %>%              # loading the Star Wars data
 N <- nrow(dat)
 
 # Calculate the number of observations in each
-count_species <- dat %>% group_by(species) %>% count()
-count_species
+(count_species <- dat %>% group_by(species) %>% count())
 count_species$n / N
 
 # Generating our synthetic data via sample()
@@ -53,12 +52,10 @@ dat %>%
      xlab("Mass (kg)") + ggtitle("Original Data")
 
 # Sample Mean
-mean_mass <- mean(dat$mass)
-mean_mass
+(mean_mass <- mean(dat$mass))
 
 # Sample Standard Deviation
-sd_mass <- sd(dat$mass)
-sd_mass
+(sd_mass <- sd(dat$mass))
 
 # Generating our synthetic data via rnorm()
 set.seed(22)
